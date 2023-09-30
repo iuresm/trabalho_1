@@ -1,0 +1,11 @@
+all: func.o
+	gcc func.o cod.c -o main
+
+func.o: func.h
+	gcc -c cod_func.c
+
+clean:
+	rm -rf *.o main
+
+run:
+	./main
